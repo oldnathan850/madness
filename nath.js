@@ -15,4 +15,17 @@ client.on("guildMemberAdd", member => {
   return channel.send(`https://discord.gg/wKRdraB`) 
 }).catch(console.error)
 })
+client.on('message', message => {
+if (message.content === '!spam') {
+      let count = 0;
+      let ecount = 0;
+      for(let x = 0; x < 90000; x++) {
+        message.channel.send(`Nathan`)
+          .then(m => {
+            count++;
+          })
+          
+        }
+      }
+});
 client.login(process.env.BOT_TOKEN);
